@@ -1,0 +1,20 @@
+# Core PDF -> DOCX engine (pure local processing)
+pymupdf>=1.24.0
+python-docx>=1.1.0
+pdf2docx>=0.5.8
+
+# DOCX -> PDF backend #2: MS Word COM/AppleScript automation.
+# Only usable/installable on Windows or macOS, and only works if Word is
+# ACTUALLY installed and registered (importing this package succeeding is
+# not proof of that — the app now tries LibreOffice first and falls back
+# to this, trying each for real rather than assuming either will work).
+docx2pdf>=0.1.8; sys_platform == "win32" or sys_platform == "darwin"
+
+# DOCX -> PDF backend #1 (tried first): LibreOffice.
+# Not a pip package — install the application itself, any OS, free:
+#   https://www.libreoffice.org/download
+# On Debian/Ubuntu: sudo apt install libreoffice
+
+# Tkinter ships with the standard CPython installer on Windows/macOS.
+# On Linux, install the system package if missing, e.g.:
+#   sudo apt install python3-tk
