@@ -2,6 +2,9 @@
 pymupdf>=1.24.0
 python-docx>=1.1.0
 pdf2docx>=0.5.8
+rapidocr-onnxruntime
+pillow
+numpy
 
 # DOCX -> PDF backend #2: MS Word COM/AppleScript automation.
 # Only usable/installable on Windows or macOS, and only works if Word is
